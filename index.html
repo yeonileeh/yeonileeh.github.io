@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LEE HYE YEON · 이혜연</title>
+<meta name="description" content="이혜연 | 기획 프로듀서. 현실에 환상이 스며든 세계, 절망 속에서도 끝내 무언가를 붙잡는 경계의 인물들에게 끌린다.">
+<meta property="og:title" content="LEE HYE YEON · 이혜연">
+<meta property="og:description" content="기획 프로듀서. 현실에 환상이 스며든 세계, 절망 속에서도 끝내 무언가를 붙잡는 경계의 인물들에게 끌린다.">
+<meta property="og:image" content="https://yeonileeh.github.io/witchs-apothecary/img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,900;1,6..96,400;1,6..96,900&family=Noto+Serif+KR:wght@400;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* 시안 G (3판) — 검정·네온·아이보리. 인쇄물 컨셉은 걷어내고, 소개 한 페이지를 통째로 네온으로. 스티커·별·네온 그림자는 남겼다. */
+  :root {
+    --ink: #121211;
+    --paper: #eee8da;
+    --neon: #c8ff1e;
+    --grey: #8c877c;
+    --grey-p: #6e6a60;
+    --rule-i: #3a3833;
+    --rule-p: #cfc7b6;
+    --bodoni: "Bodoni Moda", serif;
+    --kr: "Noto Serif KR", serif;
+    --sans: "Noto Sans KR", sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--ink); }
+  body { background: var(--ink); color: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  main { max-width: 480px; margin: 0 auto; position: relative; }
+
+
+  .micro { font-size: 10.5px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
+  .star { color: var(--neon); }
+  .paper .star { color: var(--ink); }
+  section { padding: 0 16px; }
+  .folio { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0 10px; border-bottom: 1.5px solid currentColor; }
+  .folio i { font-family: var(--bodoni); font-size: 14px; letter-spacing: 0; text-transform: none; }
+
+
+  /* ── 1. 표지 ── */
+  .cover { min-height: 100svh; display: flex; flex-direction: column; padding-bottom: 18px; }
+  .name-block { position: relative; margin: auto 0; padding: 40px 0 32px; }
+  .mast { font-family: var(--bodoni); font-weight: 900; font-size: min(28vw, 140px); line-height: .84; letter-spacing: -.035em; }
+  .mast span { display: block; }
+  .mast .o { color: transparent; -webkit-text-stroke: 1.5px var(--neon); font-style: italic; font-weight: 400; }
+  /* 계단: LEE 왼쪽 · Hye 가운데 · YEON 오른쪽. Hye의 y 꼬리가 YEON에 묻히지 않게 아래를 띄운다 */
+  .mast span:nth-child(1) { text-align: left; }
+  .mast span:nth-child(2) { text-align: center; padding-bottom: .2em; }
+  .mast span:nth-child(3) { text-align: right; }
+  .mast .o::before { -webkit-text-stroke: 0; }
+  /* 이름만: 네온 판이 살짝 어긋나게 깔린다 */
+  .mis { position: relative; isolation: isolate; }
+  .mis::before { content: attr(data-t); position: absolute; left: .05em; right: -.05em; text-align: inherit; top: .04em; color: var(--neon); z-index: -1; white-space: nowrap; }
+  .kr { margin-top: 18px; }
+  .kr .sub { display: block; margin-top: 8px; font-size: 14px; letter-spacing: .12em; color: var(--neon); }
+  .kr b { font-family: var(--kr); font-weight: 900; font-size: 24px; letter-spacing: .32em; }
+  .sticker {
+    position: absolute; right: -4px; top: 0; width: 104px; height: 104px; border-radius: 50%;
+    background: var(--neon); color: var(--ink); display: grid; place-content: center; text-align: center;
+    font-size: 9px; font-weight: 700; letter-spacing: .16em; line-height: 1.5; transform: rotate(12deg); z-index: 3;
+    box-shadow: 4px 4px 0 var(--paper);
+  }
+  .sticker b { display: block; font-family: var(--kr); font-weight: 900; font-size: 15px; letter-spacing: 0; margin: 2px 0; }
+  .cover .foot { padding-top: 10px; display: flex; justify-content: space-between; }
+
+  /* ── 2. 소개 (작가 소개 확정본) ── */
+  .paper { background: var(--paper); color: var(--ink); padding-bottom: 56px; }
+  .intro .lead { word-break: keep-all;  font-family: var(--kr); font-weight: 900; font-size: 23px; line-height: 1.5; letter-spacing: -.03em; margin-top: 36px; }
+  .neon { background: var(--neon); color: var(--ink); padding-bottom: 56px; }
+  .neon .star { color: var(--ink); }
+  .intro mark { background: var(--ink); color: var(--neon); padding: 0 .06em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .intro .text { margin-top: 28px; padding-top: 18px; border-top: 1.5px solid var(--ink); }
+  .intro .text p { word-break: keep-all; font-family: var(--kr); font-size: 15.5px; line-height: 1.9; margin-bottom: 1em; }
+  .band { padding: 26px 16px 34px; }
+  .social { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .social a { display: flex; flex-direction: column; align-items: center; gap: 9px; padding: 8px 4px; color: var(--paper); }
+  .social a + a { border-left: 1px solid var(--rule-i); }
+  .social svg { width: 28px; height: 28px; fill: none; stroke: var(--neon); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  .social svg .f { fill: var(--neon); stroke: none; }
+  .social span { font-size: 10.5px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--grey); }
+  .social a:active span { color: var(--neon); }
+
+  /* ── 3. 참여 작품 ── */
+  .ink { padding-bottom: 56px; }
+  .h { font-family: var(--kr); font-weight: 900; font-size: 46px; line-height: 1.05; letter-spacing: -.04em; margin-top: 40px; }
+  .h .en { display: block; font-family: var(--bodoni); font-style: italic; font-weight: 400; font-size: 17px; letter-spacing: 0; color: var(--grey); margin-top: 10px; }
+  /* 참여 작품 — 연도는 왼쪽에 세로로 크게 붙어 따라오고, 포스터는 오른쪽 끝까지 흘러 나간다 */
+  .works { margin: 34px -16px 0 0; }
+  .yr { display: grid; grid-template-columns: 52px 1fr; padding-bottom: 56px; }
+  .yl {
+    position: sticky; top: 24px; align-self: start;
+    writing-mode: vertical-rl; transform: rotate(180deg);
+    font-family: var(--bodoni); font-weight: 900; font-size: 54px; line-height: 1; letter-spacing: .02em;
+    color: transparent; -webkit-text-stroke: 1px #4a4740; padding: 2px 0 0;
+  }
+  .yr:first-child .yl { -webkit-text-stroke-color: var(--neon); }
+  .list { padding-bottom: 28px; min-height: 220px; }
+  .w { display: flex; flex-direction: column; margin-bottom: 34px; }
+  .w figure { background: #1f1e1c; line-height: 0; }
+  .w img { width: 100%; height: auto; display: block;
+           filter: brightness(.82) saturate(.9); transition: filter .5s, transform .8s; }
+  .w.in img { filter: none; }
+  .w .cap { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 10px; padding: 14px 12px 0; justify-content: center; text-align: center; }
+  .w .tag { font-family: var(--sans); font-size: 11.5px; font-weight: 700; letter-spacing: .06em; color: var(--neon); margin-right: 9px; vertical-align: .2em; white-space: nowrap; }
+  .w b { flex-basis: 100%; font-family: var(--kr); font-weight: 900; font-size: 21px; line-height: 1.32; }
+  .w .r { flex-basis: 100%; font-size: 12.5px; color: var(--grey); }
+  .w.now figure { outline: 1.5px solid var(--neon); outline-offset: -1.5px; }
+  .w.now b { color: var(--neon); }
+  .w .st { font-style: normal; font-size: .7em; vertical-align: .2em; }
+
+  /* ── 4. 함께한 곳 ── */
+  .with { margin-top: 44px; }
+  .with ul { list-style: none; margin-top: 12px; }
+  .with li { display: grid; grid-template-columns: 92px 1fr; padding: 9px 0; border-bottom: 1px dotted var(--rule-i); font-size: 14.5px; }
+  .with li span { font-family: var(--bodoni); font-style: italic; font-size: 13px; color: var(--grey); padding-top: 1px; }
+
+  /* ── 5. 링크 ── */
+  .links .btn {
+    display: flex; justify-content: space-between; align-items: center; margin-top: 32px;
+    background: var(--neon); color: var(--ink); padding: 18px 18px; box-shadow: 5px 5px 0 var(--ink);
+    transition: transform .12s, box-shadow .12s;
+  }
+  .links .btn:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--ink); }
+  .links .btn b { font-family: var(--kr); font-weight: 900; font-size: 21px; }
+  .links .btn small { font-size: 10.5px; font-weight: 700; letter-spacing: .18em; }
+  .links .lbl { margin: 34px 0 4px; color: var(--grey-p); }
+  .links .row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 15px 0; border-bottom: 1px solid var(--rule-p); }
+  .links .row b { font-family: var(--kr); font-weight: 900; font-size: 18px; line-height: 1.35; }
+  .links .row small { font-size: 12px; color: var(--grey-p); white-space: nowrap; }
+  .links .row:active b { background: var(--neon); }
+  .end { display: flex; justify-content: space-between; padding: 28px 16px 40px; border-top: 1px solid var(--rule-i); color: var(--grey); }
+</style>
+</head>
+<body>
+<main>
+  <!-- 1. 표지 -->
+  <section class="cover">
+    <div class="folio micro"><span><span class="star">✦</span> Lee Hye Yeon</span></div>
+    <div class="name-block">
+    <h1 class="mast">
+      <span class="mis" data-t="LEE">LEE</span>
+      <span class="o">Hye</span>
+      <span class="mis" data-t="YEON">YEON</span>
+    </h1>
+    <div class="kr"><b>이혜연</b><span class="sub">기획 프로듀서, StoryRunner</span></div>
+    </div>
+    <div class="foot micro"><span></span><span>↓</span></div>
+  </section>
+
+  <!-- 2. 소개 — 전시 작가 소개 확정본(2026-11-23) -->
+  <section class="neon intro">
+    <div class="folio micro"><span><span class="star">✦</span> About</span></div>
+    <p class="lead">현실에 <mark>환상</mark>이 스며든 세계,<br>절망 속에서도 끝내 무언가를 붙잡는 <mark>경계의 인물들</mark>에게 끌린다.</p>
+    <div class="text">
+      <p>영화 연출을 전공하고 2013년부터 기획 프로듀서로 영화와 드라마의 기획·제작에 참여해 왔다.</p>
+      <p>장르와 매체에 얽매이지 않고, 매력적인 세계관과 캐릭터 중심의 이야기를 만들어 가고 있다.</p>
+      <p>사람과 기술을 연결하는 것, 관객이 하나의 세계를 직접 체험하는 인터랙티브 내러티브에 비전을 두고, 현업을 이어가며 게임 프로젝트를 실험 중이다.</p>
+    </div>
+  </section>
+
+  <!-- 채널 — 네온 카드 밑, 검정 위 아이콘 -->
+  <section class="band">
+      <nav class="social" aria-label="채널">
+      <a href="https://instagram.com/leehyeey"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" class="f"/></svg><span>Instagram</span></a>
+      <a href="https://brunch.co.kr/@leehye"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 7v10M9.5 11.2c.8-1 1.8-1.5 3-1.5 2 0 3.3 1.5 3.3 3.6S14.5 17 12.5 17c-1.2 0-2.2-.5-3-1.5"/></svg><span>Brunch</span></a>
+      <a href="https://www.youtube.com/@ISANG_SEOUL"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.2 9.2v5.6l4.8-2.8z" class="f"/></svg><span>YouTube</span></a>
+    </nav>
+  </section>
+
+  <!-- 3. 참여 작품 + 4. 함께한 곳 -->
+  <section class="ink">
+    <div class="folio micro"><span><span class="star">✦</span> Credits</span></div>
+    <h2 class="h">참여 작품<span class="en">Stories I was part of, 2013 — 2026</span></h2>
+    <div class="works">
+      <div class="yr"><span class="yl" aria-hidden="true">2026</span><div class="list">
+        <a href="https://yeonileeh.github.io/witchs-apothecary/" class="w now"><figure><img src="posters/witch.jpg" alt="마녀의 한약방 포스터" loading="lazy"></figure><div class="cap"><b><span class="tag">게임</span>마녀의 한약방 <i class="st">✦</i></b><span class="r">디렉터 · 시나리오</span></div></a>
+        <div class="w"><figure><img src="posters/family.jpg" alt="가족관계증명서 포스터" loading="lazy"></figure><div class="cap"><b><span class="tag">MBC 일일드라마</span>가족관계증명서</b><span class="r">기획 프로듀서</span></div></div>
+        <div class="w"><figure><img src="posters/meteor.webp" alt="메테오 콤플렉스 포스터" loading="lazy"></figure><div class="cap"><b><span class="tag">소설</span>메테오 콤플렉스</b><span class="r">기획·출간</span></div></div>
+        <div class="w"><figure><img src="posters/yeonggye.webp" alt="영계 관리 본부 수사 일지: 천해 편 포스터" loading="lazy"></figure><div class="cap"><b><span class="tag">소설</span>영계 관리 본부 수사 일지<br>: 천해 편</b><span class="r">기획·출간</span></div></div>
+      </div></div>
+      <div class="yr"><span class="yl" aria-hidden="true">2024</span><div class="list">
+        <div class="w"><figure><img src="posters/escape.jpg" alt="탈출: 프로젝트 사일런스 포스터" loading="lazy"></figure><div class="cap"><b><span class="tag">영화</span>탈출: 프로젝트 사일런스</b><span class="r">기획 참여</span></div></div>
+      </div></div>
+      <div class="yr"><span class="yl" aria-hidden="true">2021</span><div class="list">
+        <div class="w"><figure><img src="posters/miracle.jpg" alt="기적 포스터" loading="lazy"></figure><div class="cap"><b><span class="tag">영화</span>기적</b><span class="r">기획 프로듀서</span></div></div>
+        <div class="w"><figure><img src="posters/mogadishu.jpg" alt="모가디슈 포스터" loading="lazy"></figure><div class="cap"><b><span class="tag">영화</span>모가디슈</b><span class="r">기획 참여</span></div></div>
+      </div></div>
+      <div class="yr"><span class="yl" aria-hidden="true">2019</span><div class="list">
+        <div class="w"><figure><img src="posters/ashfall.jpg" alt="백두산 포스터" loading="lazy"></figure><div class="cap"><b><span class="tag">영화</span>백두산</b><span class="r">기획 참여</span></div></div>
+      </div></div>
+      <div class="yr"><span class="yl" aria-hidden="true">2018</span><div class="list">
+        <div class="w"><figure><img src="posters/seducer.jpg" alt="위대한 유혹자 포스터" loading="lazy"></figure><div class="cap"><b><span class="tag">MBC 미니시리즈</span>위대한 유혹자</b><span class="r">보조작가</span></div></div>
+      </div></div>
+      <div class="yr"><span class="yl" aria-hidden="true">2017</span><div class="list">
+        <div class="w"><figure><img src="posters/gods.jpg" alt="신과함께 포스터" loading="lazy"></figure><div class="cap"><b><span class="tag">영화</span>신과함께</b><span class="r">기획 참여</span></div></div>
+      </div></div>
+      <div class="yr"><span class="yl" aria-hidden="true">2013</span><div class="list">
+        <div class="w"><figure><img src="posters/roni.jpg" alt="로니 스틸컷" loading="lazy"></figure><div class="cap"><b><span class="tag">단편영화</span>로니</b><span class="r">연출 · 각본</span><span class="r">부산국제단편영화제 2020 앙코르 상영</span></div></div>
+      </div></div>
+    </div>
+
+    <div class="with">
+      <p class="micro" style="color:var(--grey)"><span class="star">✦</span> With</p>
+      <ul>
+        <li><span>2025–</span>(주)보이드</li>
+        <li><span>2021–2025</span>CJ 스튜디오스 블라드스튜디오</li>
+        <li><span>2019–2021</span>(주)블러썸픽쳐스</li>
+        <li><span>2018</span>(주)본팩토리</li>
+        <li><span>2014–2017</span>(주)덱스터스튜디오</li>
+        <li><span>2013–2014</span>(주)CJ E&amp;M 영화기획팀</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 끝 -->
+  <footer class="end micro"><span>© 2026 Lee Hye Yeon</span><span class="star">✦</span></footer>
+</main>
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('in', e.isIntersecting)), { rootMargin: '-30% 0px -30% 0px' });
+  document.querySelectorAll('.w').forEach(w => io.observe(w));
+</script>
+</body>
+</html>
